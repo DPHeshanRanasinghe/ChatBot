@@ -1,6 +1,6 @@
 # About
 
-A powerful document-based chatbot built with Python, FastAPI, and RAG (Retrieval-Augmented Generation) technology. This application combines LangChain, ChromaDB, and Olama's DeepSeq R1 model to create an intelligent chatbot that can understand and respond to queries based on your document collection.
+A powerful document-based chatbot built with Python, FastAPI, and RAG (Retrieval-Augmented Generation) technology. This application combines LangChain, ChromaDB, and Olama's DeepSeq model to create an intelligent chatbot that can understand and respond to queries based on your document collection.
 
 ## Key Highlights
 
