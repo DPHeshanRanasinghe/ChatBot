@@ -1,10 +1,63 @@
-1. Create a conda environment
-    conda create -n chatbot python=3.10 anaconda
 
-2. Install dependencies
-    pip install fastapi uvicorn langchain langchain-community langchain-ollama langchain-chroma langchain-huggingface sentence-transformers chromadb
+# Chatbot using Python and FastAPI
 
-    pip install pypdf
+This repository contains a chatbot application built using Python with several advanced libraries and tools, including LangChain, FastAPI, Olama, ChromaDB, HuggingFace, and more. It allows for interacting with a document-based RAG (Retrieval-Augmented Generation) system.
 
-    Install Ollama -> https://ollama.com/download
-    ollama pull deepseek-r1:1.5b
+## Features
+
+* **FastAPI Backend:** Utilizes FastAPI for serving the chatbot API.
+* **LangChain Integration:** Leverages LangChain for document processing and RAG model building.
+* **Olama Model Integration:** DeepSeq r1:1.5b model from Olama for natural language understanding and generation.
+* **ChromaDB:** For storing and retrieving documents in a vectorized format, enabling efficient search.
+* **PDF, .txt, and .md File Parsing:** Supports parsing and working with PDF, .txt, and .md files.
+* **Customizable Chatbot:** Modify or extend chatbot behavior easily using custom document stores and models.
+
+## Installation
+
+### Prerequisites
+
+Ensure you have Conda installed and set up on your machine. You will also need Python 3.7+ to run the application.
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/DPHeshanRanasinghe/ChatBot.git
+cd ChatBot
+```
+
+### Step 2: Set Up Conda Environment
+
+```bash
+conda create -n chatbot python=3.10 anaconda
+conda activate chatbot
+```
+
+### Step 3: Install Dependencies
+
+Use the provided `requirements.txt` to install the necessary libraries:
+
+```bash
+pip install -r requirements.txt
+```
+
+Dependencies include:
+* **FastAPI**
+* **Uvicorn**
+* **LangChain**
+* **Olama**
+* **Chroma**
+* **HuggingFace**
+* **SentenceTransformers**
+* **ChromaDB**
+* **PyPDF**
+
+If there's any other specific setup, you can mention it here.
+
+### Step 4: Set Up Olama
+
+To use the Olama DeepSeq r1:1.5b model, you can follow the steps outlined in their documentation. Ensure that you have pulled the correct model and integrated it into the application by referencing the model in your configuration file.
+
+### Step 5: Run the Application
+
+Once you have installed all dependencies and set up the environment, you can start the FastAPI application with:
+
