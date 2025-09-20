@@ -74,6 +74,13 @@ To use the Olama DeepSeq r1:1.5b model, you can follow the steps outlined in the
 
 Check Requirements.txt file
 
+## Author
+
+**Heshan Ranasinghe**  
+Electronic and Telecommunication Engineering Undergraduate  
+🌐 GitHub: [@DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)  
+📧 Email: [hranasinghe505@gmail.com]  
+💼 LinkedIn: [www.linkedin.com/in/heshan-ranasinghe-988b00290]
 
 
 
