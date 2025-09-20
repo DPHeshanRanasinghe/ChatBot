@@ -72,5 +72,8 @@ To use the Olama DeepSeq r1:1.5b model, you can follow the steps outlined in the
 
 ### Step 5: Run the Application
 
-Once you have installed all dependencies and set up the environment, you can start the FastAPI application with:
+Check Requirements.txt file
+
+
+
 
