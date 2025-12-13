@@ -1,18 +1,33 @@
 from pathlib import Path
-from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_chroma import Chroma
+from langchain_huggingface import HuggingFaceEmbeddings
 
 from lib.split_docs import split_docs
-
-db_path = "./chromadb"
+from lib.logger import logger
+from config import DB_PATH, EMBEDDING_MODEL
 
 def get_vectorstore(docs):
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2") # get the embeddings model
-    if Path(db_path).exists() and any(Path(db_path).iterdir()): # check if the db_path directory exists and is not empty
-        return Chroma(persist_directory=db_path, embedding_function=embeddings) # load the existing vectorstore
-    chunks = split_docs(docs) # split the documents into smaller chunks
-    print(f"Number of text chunks: {len(chunks)}")
+    """Get or create a vector store from documents.
+    
+    Args:
+        docs: List of documents to vectorize.
+    
+    Returns:
+        Chroma vector store instance.
+    """
+    logger.info(f"Initializing embeddings model: {EMBEDDING_MODEL}")
+    embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
+    
+    # Check if existing vectorstore exists
+    if Path(DB_PATH).exists() and any(Path(DB_PATH).iterdir()):
+        logger.info(f"Loading existing vectorstore from {DB_PATH}")
+        return Chroma(persist_directory=DB_PATH, embedding_function=embeddings)
+    
+    # Create new vectorstore
+    chunks = split_docs(docs)
     if not chunks:
-        raise ValueError("No valid text chunks found. Check your documents in 'data/' folder.")
-    vs = Chroma.from_documents(chunks, embeddings, persist_directory=db_path) # create a new vectorstore
+        raise ValueError("No valid text chunks found. Check your documents in 'docs/' folder.")
+    
+    logger.info(f"Creating new vectorstore with {len(chunks)} chunks at {DB_PATH}")
+    vs = Chroma.from_documents(chunks, embeddings, persist_directory=DB_PATH)
     return vs
