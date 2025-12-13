@@ -79,6 +79,37 @@ You'll see a beautiful chat interface where you can ask questions!
 
 ---
 
+## ⚡ Daily Usage (Already Installed)
+
+If you've already set up the project and just want to run it:
+
+### 1. Open Terminal in the ChatBot folder
+
+### 2. Activate your environment
+```bash
+# If using conda
+conda activate chatbot
+
+# If using venv (Windows)
+venv\Scripts\activate
+```
+
+### 3. Make sure Ollama is running
+```bash
+ollama serve
+```
+
+### 4. Start the server
+```bash
+python -m uvicorn chat_api:app --reload
+```
+
+### 5. Open http://localhost:8000 in your browser
+
+**That's it!** 🎉
+
+---
+
 ## 📸 What You'll See
 
 When you open http://localhost:8000, you'll get:
