@@ -1,43 +1,47 @@
+# 🤖 InfoTech College Chatbot
 
-# Chatbot using Python and FastAPI
+A RAG (Retrieval-Augmented Generation) chatbot with a **beautiful web interface** built for InfoTech College of Business & IT.
 
-This repository contains a chatbot application built using Python with several advanced libraries and tools, including LangChain, FastAPI, Olama, ChromaDB, HuggingFace, and more. It allows for interacting with a document-based RAG (Retrieval-Augmented Generation) system.
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)
+![LangChain](https://img.shields.io/badge/LangChain-0.2+-orange.svg)
 
-## Features
+## ✨ Features
 
-* **FastAPI Backend:** Utilizes FastAPI for serving the chatbot API.
-* **LangChain Integration:** Leverages LangChain for document processing and RAG model building.
-* **Olama Model Integration:** DeepSeq r1:1.5b model from Olama for natural language understanding and generation.
-* **ChromaDB:** For storing and retrieving documents in a vectorized format, enabling efficient search.
-* **PDF, .txt, and .md File Parsing:** Supports parsing and working with PDF, .txt, and .md files.
-* **Customizable Chatbot:** Modify or extend chatbot behavior easily using custom document stores and models.
+- 🎨 **Web Chat Interface** - Beautiful, responsive chat UI
+- 🔍 **RAG Pipeline** - Retrieval-Augmented Generation for accurate responses
+- 🚀 **FastAPI Backend** - High-performance REST API
+- 🤖 **Ollama LLM** - Local DeepSeek-r1:1.5b model
+- 📊 **ChromaDB** - Vector database for semantic search
+- 📄 **Multi-format** - Supports PDF, TXT, and Markdown files
 
-## Installation
+---
+
+## 🚀 Quick Start (5 Minutes)
 
 ### Prerequisites
 
-- Python 3.10+
-- Conda (recommended) or pip
-- [Ollama](https://ollama.com/download) installed
+1. **Python 3.10+** installed
+2. **Ollama** installed from https://ollama.com/download
 
-### Step 1: Clone the Repository
+### Step 1: Clone & Enter Directory
 
 ```bash
 git clone https://github.com/DPHeshanRanasinghe/ChatBot.git
 cd ChatBot
 ```
 
-### Step 2: Set Up Environment
+### Step 2: Create Virtual Environment
 
 ```bash
-# Create conda environment
+# Using conda (recommended)
 conda create -n chatbot python=3.10 -y
 conda activate chatbot
 
-# Or use venv
+# OR using venv
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
+source venv/bin/activate  # Linux/Mac
 ```
 
 ### Step 3: Install Dependencies
@@ -46,24 +50,119 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 ```
 
-Dependencies include:
-* **FastAPI**
-* **Uvicorn**
-* **LangChain**
-* **Olama**
-* **Chroma**
-* **HuggingFace**
-* **SentenceTransformers**
-* **ChromaDB**
-* **PyPDF**
+### Step 4: Setup Ollama Model
 
-If there's any other specific setup, you can mention it here.
+Open a **new terminal** and run:
+```bash
+ollama pull deepseek-r1:1.5b
+ollama serve
+```
+Keep this terminal running!
 
-### Step 4: Set Up Olama
+### Step 5: Add Your Documents
 
-To use the Olama DeepSeq r1:1.5b model, you can follow the steps outlined in their documentation. Ensure that you have pulled the correct model and integrated it into the application by referencing the model in your configuration file.
+Place your PDF, TXT, or MD files in the `docs/` folder. These will be the chatbot's knowledge base.
 
-### Step 5: Run the Application
+### Step 6: Run the Chatbot
 
-Once you have installed all dependencies and set up the environment, you can start the FastAPI application with:
+```bash
+python -m uvicorn chat_api:app --reload
+```
+
+### Step 7: Open the Website! 🎉
+
+Open your browser and go to:
+
+👉 **http://localhost:8000**
+
+You'll see a beautiful chat interface where you can ask questions!
+
+---
+
+## 📸 What You'll See
+
+When you open http://localhost:8000, you'll get:
+
+- 💬 **Chat Window** - Type questions and get AI responses
+- 🎯 **Quick Buttons** - Pre-made questions to try
+- ⌨️ **Input Box** - Type your own questions
+- 🤖 **AI Assistant** - Answers based on your documents
+
+---
+
+## 🎮 Two Ways to Use
+
+| Mode | Command | Access |
+|------|---------|--------|
+| **Web UI** ⭐ | `python -m uvicorn chat_api:app --reload` | http://localhost:8000 |
+| **Terminal** | `python main.py` | Type in terminal |
+| **API Docs** | (after starting server) | http://localhost:8000/docs |
+
+---
+
+## 📁 Project Structure
+
+```
+ChatBot/
+├── chat_api.py          # FastAPI REST API
+├── main.py              # CLI interface
+├── config.py            # Configuration
+├── requirements.txt     # Dependencies
+├── static/
+│   └── index.html       # Web chat interface ⭐
+├── lib/                 # Core modules
+├── docs/                # Your documents go here 📄
+└── chromadb/            # Vector database (auto-created)
+```
+
+---
+
+## ⚙️ Configuration
+
+Edit `.env` file or `config.py` to customize:
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `LLM_MODEL` | `deepseek-r1:1.5b` | Ollama model |
+| `CHUNK_SIZE` | `1000` | Document chunk size |
+| `RETRIEVER_K` | `4` | Number of docs to retrieve |
+
+---
+
+## 🛠️ Troubleshooting
+
+### "Connection refused" error
+→ Make sure Ollama is running: `ollama serve`
+
+### "Model not found" error
+→ Pull the model: `ollama pull deepseek-r1:1.5b`
+
+### Port already in use
+→ Use a different port: `python -m uvicorn chat_api:app --port 8001`
+
+### Slow first response
+→ Normal! First time loads the model into memory.
+
+---
+
+## 📚 Tech Stack
+
+- [FastAPI](https://fastapi.tiangolo.com/) - Web framework
+- [LangChain](https://langchain.com/) - LLM framework
+- [Ollama](https://ollama.com/) - Local LLM
+- [ChromaDB](https://www.trychroma.com/) - Vector database
+- [HuggingFace](https://huggingface.co/) - Embeddings
+
+---
+
+## 👤 Author
+
+**Heshan Ranasinghe**
+- GitHub: [@DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)
+
+---
+
+## 📄 License
+
+MIT License - feel free to use and modify!
 
