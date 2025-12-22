@@ -1,4 +1,4 @@
-# 🤖 InfoTech College Chatbot
+#  InfoTech College Chatbot
 
 A RAG (Retrieval-Augmented Generation) chatbot with a **beautiful web interface** built for InfoTech College of Business & IT.
 
@@ -6,18 +6,18 @@ A RAG (Retrieval-Augmented Generation) chatbot with a **beautiful web interface*
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)
 ![LangChain](https://img.shields.io/badge/LangChain-0.2+-orange.svg)
 
-## ✨ Features
+##  Features
 
-- 🎨 **Web Chat Interface** - Beautiful, responsive chat UI
-- 🔍 **RAG Pipeline** - Retrieval-Augmented Generation for accurate responses
-- 🚀 **FastAPI Backend** - High-performance REST API
-- 🤖 **Ollama LLM** - Local DeepSeek-r1:1.5b model
-- 📊 **ChromaDB** - Vector database for semantic search
-- 📄 **Multi-format** - Supports PDF, TXT, and Markdown files
+-  **Web Chat Interface** - Beautiful, responsive chat UI
+-  **RAG Pipeline** - Retrieval-Augmented Generation for accurate responses
+-  **FastAPI Backend** - High-performance REST API
+-  **Ollama LLM** - Local DeepSeek-r1:1.5b model
+-  **ChromaDB** - Vector database for semantic search
+-  **Multi-format** - Supports PDF, TXT, and Markdown files
 
 ---
 
-## 🚀 Quick Start (5 Minutes)
+##  Quick Start (5 Minutes)
 
 ### Prerequisites
 
@@ -73,13 +73,13 @@ python -m uvicorn chat_api:app --reload
 
 Open your browser and go to:
 
-👉 **http://localhost:8000**
+ **http://localhost:8000**
 
 You'll see a beautiful chat interface where you can ask questions!
 
 ---
 
-## ⚡ Daily Usage (Already Installed)
+##  Daily Usage (Already Installed)
 
 If you've already set up the project and just want to run it:
 
@@ -114,24 +114,24 @@ python -m uvicorn chat_api:app --reload
 
 When you open http://localhost:8000, you'll get:
 
-- 💬 **Chat Window** - Type questions and get AI responses
-- 🎯 **Quick Buttons** - Pre-made questions to try
-- ⌨️ **Input Box** - Type your own questions
-- 🤖 **AI Assistant** - Answers based on your documents
+-  **Chat Window** - Type questions and get AI responses
+-  **Quick Buttons** - Pre-made questions to try
+-  **Input Box** - Type your own questions
+-  **AI Assistant** - Answers based on your documents
 
 ---
 
-## 🎮 Two Ways to Use
+##  Two Ways to Use
 
 | Mode | Command | Access |
 |------|---------|--------|
-| **Web UI** ⭐ | `python -m uvicorn chat_api:app --reload` | http://localhost:8000 |
+| **Web UI**  | `python -m uvicorn chat_api:app --reload` | http://localhost:8000 |
 | **Terminal** | `python main.py` | Type in terminal |
 | **API Docs** | (after starting server) | http://localhost:8000/docs |
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ChatBot/
@@ -140,15 +140,15 @@ ChatBot/
 ├── config.py            # Configuration
 ├── requirements.txt     # Dependencies
 ├── static/
-│   └── index.html       # Web chat interface ⭐
+│   └── index.html       # Web chat interface 
 ├── lib/                 # Core modules
-├── docs/                # Your documents go here 📄
+├── docs/                # Your documents go here 
 └── chromadb/            # Vector database (auto-created)
 ```
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 Edit `.env` file or `config.py` to customize:
 
@@ -160,7 +160,7 @@ Edit `.env` file or `config.py` to customize:
 
 ---
 
-## 🛠️ Troubleshooting
+##  Troubleshooting
 
 ### "Connection refused" error
 → Make sure Ollama is running: `ollama serve`
@@ -176,7 +176,7 @@ Edit `.env` file or `config.py` to customize:
 
 ---
 
-## 📚 Tech Stack
+##  Tech Stack
 
 - [FastAPI](https://fastapi.tiangolo.com/) - Web framework
 - [LangChain](https://langchain.com/) - LLM framework
@@ -186,14 +186,14 @@ Edit `.env` file or `config.py` to customize:
 
 ---
 
-## 👤 Author
+##  Author
 
 **Heshan Ranasinghe**
 - GitHub: [@DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)
 
 ---
 
-## 📄 License
+##  License
 
 MIT License - feel free to use and modify!
 
