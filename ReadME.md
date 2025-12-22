@@ -69,7 +69,7 @@ Place your PDF, TXT, or MD files in the `docs/` folder. These will be the chatbo
 python -m uvicorn chat_api:app --reload
 ```
 
-### Step 7: Open the Website! 🎉
+### Step 7: Open the Website! 
 
 Open your browser and go to:
 
