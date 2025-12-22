@@ -106,11 +106,11 @@ python -m uvicorn chat_api:app --reload
 
 ### 5. Open http://localhost:8000 in your browser
 
-**That's it!** 🎉
+**That's it!** 
 
 ---
 
-## 📸 What You'll See
+##  What You'll See
 
 When you open http://localhost:8000, you'll get:
 
