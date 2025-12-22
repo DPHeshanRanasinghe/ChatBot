@@ -73,7 +73,7 @@ python -m uvicorn chat_api:app --reload
 
 Open your browser and go to:
 
-👉 **http://127.0.0.1:8000**
+👉 **http://localhost:8000**
 
 You'll see a beautiful chat interface where you can ask questions!
 
