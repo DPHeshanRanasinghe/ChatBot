@@ -193,7 +193,3 @@ Edit `.env` file or `config.py` to customize:
 
 ---
 
-##  License
-
-MIT License - feel free to use and modify!
-
