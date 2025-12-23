@@ -186,10 +186,15 @@ Edit `.env` file or `config.py` to customize:
 
 ---
 
-##  Author
+## Author
 
-**Heshan Ranasinghe**
+**Heshan Ranasinghe**  
+Electronic and Telecommunication Engineering Undergraduate
+
+- Email: hranasinghe505@gmail.com
 - GitHub: [@DPHeshanRanasinghe](https://github.com/DPHeshanRanasinghe)
+- LinkedIn: [Heshan Ranasinghe](https://www.linkedin.com/in/heshan-ranasinghe-988b00290)
+
 
 ---
 
