@@ -6,6 +6,8 @@ A RAG (Retrieval-Augmented Generation) chatbot with a **beautiful web interface*
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)
 ![LangChain](https://img.shields.io/badge/LangChain-0.2+-orange.svg)
 
+![Demo Image](asstes/demo.png)
+
 ##  Features
 
 -  **Web Chat Interface** - Beautiful, responsive chat UI
@@ -55,9 +57,8 @@ pip install -r requirements.txt
 Open a **new terminal** and run:
 ```bash
 ollama pull deepseek-r1:1.5b
-ollama serve
 ```
-Keep this terminal running!
+*(Note: As long as Ollama is installed on Windows, it usually runs in the background automatically. You do not need to run `ollama serve` unless it was completely closed).*
 
 ### Step 5: Add Your Documents
 
@@ -95,9 +96,7 @@ venv\Scripts\activate
 ```
 
 ### 3. Make sure Ollama is running
-```bash
-ollama serve
-```
+Ensure the Ollama app is open/visible in your system tray. If it is, it's already running in the background.
 
 ### 4. Start the server
 ```bash
